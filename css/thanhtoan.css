@@ -1,0 +1,91 @@
+.box-group-header {
+    padding: 15px 0;
+}
+.box-group-title {
+    font-size: 18px;
+    line-height: 24px;
+}
+.box-group-title>a{
+    color: #666;
+}
+.box-white {
+    background-color: #fff;
+}
+.box {
+    margin-bottom: 20px;
+    padding: 20px;
+}
+.btn-group-sm>.btn, .btn-sm {
+    padding: 5px 10px;
+}
+/* .btn {
+    font-weight: 700;
+    padding: 10px 20px;
+} */
+.btn-warning {
+    color: #fff;
+    background-color: #f0ad4e;
+    border-color: #eea236;
+}
+.topcv-circle-number {
+    border-radius: 50%;
+    padding: 5px 10px;
+    background: #fff;
+    border: 2px solid #61c397;
+    color: #5d6c80;
+    text-align: center;
+}
+.content-payment-box {
+    padding: 10px 20px;
+}
+.checkbox, .radio {
+    position: relative;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.checkbox label, .radio label {
+    min-height: 20px;
+    padding-left: 20px;
+    margin-bottom: 0;
+    font-weight: 400;
+    cursor: pointer;
+}
+#btn-momo-transfer {
+    border: 1px solid #ae2070;
+    background: #fff;
+    padding: 5px;
+}
+#btn-momo-transfer, #btn-card, #btn-bank, #btn-bank-transfer, #btn-sms-plus, #btn-momo-transfer, #btn-sms {
+    margin-right: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 3px;
+    padding: 11px 19px;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.5), 0 1px 2px rgba(0,0,0,.05);
+    -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.5),0 1px 2px rgba(0,0,0,.05);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.5), 0 1px 2px rgba(0,0,0,.05);
+    display: inline-block;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: left;
+    vertical-align: middle;
+    cursor: pointer;
+    color: #333;
+    text-shadow: 0 1px 1px rgba(255,255,255,.75);
+    background-color: #f5f5f5;
+    border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+    border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
+    border: 1px solid #ccc;
+    border-bottom-color: #b3b3b3;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+    -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.2),0 1px 2px rgba(0,0,0,.05);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+}
+#btn-momo-transfer img {
+    width: 32px;
+}

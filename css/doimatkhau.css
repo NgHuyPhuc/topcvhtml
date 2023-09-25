@@ -1,0 +1,46 @@
+.box-group-header {
+    padding: 15px 0;
+}
+.box-group-title {
+    font-size: 18px;
+    line-height: 24px;
+}
+.box-group-toolbox {
+    font-size: 12px;
+    line-height: 24px;
+}
+.box-white {
+    background-color: #fff;
+}
+.box {
+    margin-bottom: 20px;
+    padding: 20px;
+}
+.box-group-title a{
+    color: #666;
+}
+.text-dark-gray {
+    color: #666;
+}
+.form-control {
+    -webkit-appearance: none;
+    border-color: rgba(0,0,0,.1);
+    border-radius: 2px;
+    box-shadow: none;
+    color: rgba(0,0,0,.87);
+    font-size: 12px;
+    height: 40px;
+    outline: none;
+    padding: 10px 18px;
+}
+ul.rule-password {
+    color: #4d5965;
+    /* display: none; */
+    font-family: Inter,sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    margin-top: 10px;
+    padding-left: 1rem;
+}

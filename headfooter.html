@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/detail.css">
+    <link rel="stylesheet" href="css/timkiem.css">
+    <link rel="stylesheet" href="css/thongtincanhan.css">
+    <link rel="stylesheet" href="css/doimatkhau.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/fontawesome.css"> -->
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <nav class="navbar ta-top">
+        <div class="container-fluid px-30">
+            <div class="navbar-header">
+                <h1 style="margin: 0;">
+                    <a class="navbar-brand" href="#">
+                        <img src="img/logo.webp" alt="TopCV tuyen dung tai TopCV" title="TopCV tuyển dụng tại TopCV">
+                    </a>
+                </h1>
+            </div>
+            <ul class="nav navbar-nav navbar-left">
+                <li class="navbar-left__item group">
+                    <a href="#">Việc làm</a>
+                </li>
+                <li class="navbar-left__item group">
+                    <a href="#">Hồ sơ & CV</a>
+                </li>
+                <li class="navbar-left__item group">
+                    <a href="#">Công ty</a>
+                </li>
+                <li class="navbar-left__item group">
+                    <a href="#">Phát triển sự nghiệp</a>
+                </li>
+                <li class="navbar-left__item group">
+                    <a href="#">Công cụ</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <!-- notification -->
+                <li id="nav-notification" class="navbar-right__item icon dropdown notification">
+                    <a href="javascript:void(0)" class="dropdown-togglez">
+                        <i class="fa fa-bell" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <!-- message -->
+                <li class="navbar-right__item icon">
+                    <a href="#">
+                        <i class="fa fa-comments-o"></i>
+                    </a>
+                </li>
+                <!-- logo login -->
+                <li class="navbar-right__item group profile-hover">
+                    <div class="title">
+                        <a href="javascript:void(0)">
+                            <img src="/img/anhprofile.jpg" alt="Nguyễn Huy Phúc">
+                            <span class="fullname">Nguyễn Huy Phúc</span>
+                        </a>
+                    </div>
+                    <div class="group-hover:menu navbar__item__dropdown-menu">
+                        <ul class="nav navbar-menu">
+                            <div class="dropdown-menu__info tag-border">
+                                <img src="img/anhprofile.jpg" alt="Nguyễn Huy Phúc">
+                                <div class="caption">
+                                    <p class="name">Nguyễn Huy Phúc</p>
+                                    <p class="description">Mã ứng viên: <span class="code">#abcdsad</span></p>
+                                    <p class="description">sumasa05@gmail.com</p>
+                                </div>
+                            </div>
+                            <li class="navbar-menu__item ">
+                                <a href="#">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                    Thông tin cá nhân
+                                </a>
+                            </li>
+                            <li class="navbar-menu__item ">
+                                <a href="#">
+                                    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                                    Nâng cấp tài khoản vip
+                                </a>
+                            </li>
+                            <li class="navbar-menu__item tag-border">
+                                <a href="#">
+                                    <i class="fa fa-gift" aria-hidden="true"></i>
+                                    Kích hoạt quà tặng
+                                </a>
+                            </li>
+                            <li class="navbar-menu__item ">
+                                <a href="#">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                    Nhà tuyển dụng xem hồ sơ
+                                </a>
+                            </li>
+                            <li class="navbar-menu__item ">
+                                <a href="#">
+                                    <i class="fa fa-cog" aria-hidden="true"></i>
+                                    Cài đặt gợi ý việc làm
+                                </a>
+                            </li>
+                            <li class="navbar-menu__item tag-border">
+                                <a href="#">
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                    Cài đặt nhận email
+                                </a>
+                            </li>
+                            <li class="navbar-menu__item ">
+                                <a href="#">
+                                    <i class="fa fa-shield" aria-hidden="true"></i>
+                                    Cài đặt bảo mật
+                                </a>
+                            </li>
+                            <li class="navbar-menu__item ">
+                                <a href="#">
+                                    <i class="fa fa-lock" aria-hidden="true"></i>
+                                    Đổi mật khẩu
+                                </a>
+                            </li>
+                            <li class="navbar-menu__item menu-logout">
+                                <a href="#">
+                                    <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                    Đăng xuất
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+
+    </nav>
+
+
+    <footer id="footer-desktop">
+        <div class="footer-common-search-keywords">
+            <div class="container keyword-seo">
+                <a target="_blank" href="https://www.topcv.vn/cv-la-gi">cv là gì</a>
+                <a target="_blank" href="https://www.topcv.vn/mau-cv">Mẫu CV</a>
+                <a target="_blank" href="https://www.topcv.vn/mau-cv">mẫu cv tiếng việt</a>
+                <a target="_blank" href="https://www.topcv.vn/tai-mau-so-yeu-ly-lich-chuan-mien-phi">Sơ yếu lý lịch</a>
+                <a target="_blank" href="https://www.topcv.vn/tong-hop-cv-tham-khao-cac-nhom-nganh">CV tham khảo</a>
+                <a target="_blank" href="https://www.topcv.vn/tong-hop-cv-tham-khao-cho-lap-trinh-vien">tổng hợp CV tham
+                    khảo cho lập trình viên</a>
+                <a target="_blank" href="https://www.topcv.vn/giay-to-thu-tuc-ho-so-xin-viec">giấy tờ thủ tục hồ sơ xin
+                    việc</a>
+                <a target="_blank" href="https://www.topcv.vn/cach-viet-email-xin-viec-bang-tieng-anh">Email xin việc
+                    bằng tiếng anh</a>
+                <a target="_blank" href="https://www.topcv.vn/mau-don-xin-viec">Mẫu đơn xin việc</a>
+                <a target="_blank" href="https://www.topcv.vn/mau-don-xin-nghi-viec">mẫu đơn xin nghỉ việc</a>
+                <a target="_blank" href="https://www.topcv.vn/mau-don-xin-nghi-phep">Cách viết đơn xin nghỉ phép</a>
+                <a target="_blank" href="https://www.topcv.vn/viet-cv-the-nao-cho-chuan">Cách viết CV xin việc</a>
+                <a target="_blank" href="https://www.topcv.vn/viet-cv-nganh-kinh-doanh-ban-hang-nhu-the-nao">cách viết
+                    CV Ngành Kinh doanh/Bán hàng</a>
+                <a target="_blank" href="https://www.topcv.vn/cach-viet-cv-nganh-ke-toan-kiem-toan">cách viết CV Ngành
+                    Kế Toán/Kiểm Toán</a>
+                <a target="_blank" href="https://www.topcv.vn/cach-viet-cv-nganh-nhan-su">cách viết CV Ngành Nhân Sự</a>
+                <a target="_blank" href="https://www.topcv.vn/huong-dan-viet-cv-xin-hoc-bong">cách viết CV xin Học
+                    bổng</a>
+                <a target="_blank" href="https://www.topcv.vn/huong-dan-viet-cv-xin-viec-tieng-anh">cách viết CV Tiếng
+                    Anh</a>
+                <a target="_blank" href="https://www.topcv.vn/huong-dan-viet-cv-tieng-nhat">cách viết CV Tiếng Nhật</a>
+                <a target="_blank" href="https://www.topcv.vn/huong-dan-viet-cv-tieng-trung">cách viết CV Tiếng
+                    Trung</a>
+                <a target="_blank" href="https://www.topcv.vn/huong-dan-viet-cv-tieng-han">cách viết CV Tiếng Hàn</a>
+                <a target="_blank" href="https://www.topcv.vn/cam-nang-nam-nhat-danh-cho-sinh-vien">cẩm nang năm nhất
+                    cho sinh viên</a>
+                <a target="_blank" href="https://www.topcv.vn/mau-don-xin-thuc-tap-chuan-cho-sinh-vien">Mẫu đơn xin thực
+                    tập</a>
+                <a target="_blank" href="https://www.topcv.vn/huong-dan-sua-loi-go-tieng-viet-unikey">Hướng dẫn sửa lỗi
+                    gõ tiếng Việt</a>
+                <a target="_blank" href="https://www.topcv.vn/nganh-du-lich-lam-nhung-cong-viec-gi">Ngành du lịch làm
+                    việc gì</a>
+                <a target="_blank" href="https://www.topcv.vn/cam-nang-xin-viec-nganh-nhan-su">Cẩm nang xin việc ngành
+                    nhân sự</a>
+                <a target="_blank" href="https://www.topcv.vn/xin-viec-nganh-cong-nghe-thong-tin">Xin việc ngành công
+                    nghệ thông tin</a>
+                <a target="_blank" href="https://www.topcv.vn/cam-nang-xin-viec-nganh-marketing">Cẩm nang xin việc ngành
+                    marketing</a>
+                <a target="_blank" href="https://www.topcv.vn/xin-viec-nganh-ke-toan-kiem-toan">Cẩm nang xin việc ngành
+                    kế toán kiểm toán </a>
+                <a target="_blank" href="https://www.topcv.vn/xin-viec-nganh-cong-nghe-thuc-pham">Cẩm nang xin việc
+                    ngành công nghệ thực phẩm</a>
+                <a target="_blank" href="https://www.topcv.vn/cam-nang-xin-viec-nganh-tai-chinh-ngan-hang">Cẩm nang xin
+                    việc ngành tài chính ngân hàng</a>
+                <a target="_blank" href="https://www.topcv.vn/xin-viec-nganh-luat">Cẩm nang xin việc ngành luật</a>
+                <a target="_blank" href="https://www.topcv.vn/xin-viec-nganh-xay-dung-dia-oc">Cẩm nang xin việc ngành
+                    xây dựng - địa ốc</a>
+                <a target="_blank" href="https://www.topcv.vn/trac-nghiem-tinh-cach-mbti">Trắc nghiệm tính cách MBTI</a>
+                <a target="_blank" href="https://www.topcv.vn/viec-lam-remote">Việc làm online tại nhà</a>
+                <a target="_blank" href="https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-ho-chi-minh-l2">Tìm việc làm tại
+                    TP. HCM</a>
+                <a target="_blank" href="https://www.topcv.vn/mau-cover-letter-thu-xin-viec">Cách viết cover letter xin
+                    việc</a>
+                <a target="_blank" href="https://www.topcv.vn/huong-dan-viet-cv-xin-viec-tieng-anh">CV xin việc bằng
+                    tiếng Anh</a>
+                <a target="_blank" href="https://www.topcv.vn/cv-cho-sinh-vien-chua-tot-nghiep">CV cho sinh viên chưa
+                    tốt nghiệp</a>
+                <a target="_blank" href="https://www.topcv.vn/tim-viec-lam-hanh-chinh-nhan-su">Việc làm hành chính nhân
+                    sự</a>
+                <a target="_blank" href="https://www.topcv.vn/huong-dan-viet-cv-tieng-trung">Thư xin việc bằng tiếng
+                    Anh</a>
+                <a target="_blank" href="https://www.topcv.vn/cong-viec-nganh-logistic">Ngành logistic là gì</a>
+                <a target="_blank" href="https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-hai-phong-l9">Việc làm Hải
+                    Phòng</a>
+                <a target="_blank" href="https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-binh-dinh-l16">Việc làm Bình
+                    Định</a>
+                <a target="_blank" href="https://www.topcv.vn/tim-viec-lam-content-marketing">Tuyển dụng Content
+                    Marketing</a>
+                <a target="_blank" href="https://www.topcv.vn/tim-viec-lam-lap-trinh-vien-php">Tuyển lập trình viên
+                    PHP</a>
+                <a target="_blank" href="https://www.topcv.vn/tim-viec-lam-lap-trinh-vien-java">Tuyển lập trình viên
+                    Java</a>
+                <a target="_blank" href="https://www.topcv.vn/tim-viec-lam-lap-trinh-vien-net">Tuyển lập trình viên
+                    .Net</a>
+                <a target="_blank" href="https://www.topcv.vn/tim-viec-lam-nhan-vien-kinh-doanh">Tuyển dụng nhân viên
+                    kinh doanh</a>
+                <a target="_blank" href="https://www.topcv.vn/tim-viec-lam-nhan-vien-marketing">Tuyển dụng nhân viên
+                    marketing</a>
+                <a target="_blank" href="https://www.topcv.vn/tim-viec-lam-nhan-vien-ke-toan">Tìm việc kế toán</a>
+            </div>
+        </div>
+        
+        <div class="footer-main">
+            <div class="container">
+                <div class="box-main">
+                    <div class="column">
+                        <a href="https://www.topcv.vn">
+                            <img src="https://www.topcv.vn/v3/images/topcv-logo-4.png?v=1.0.1"
+                                class="img-logo-footer img-responsive" alt="TopCV tuyen dung tai TopCV"
+                                title="TopCV tuyển dụng tại TopCV">
+                        </a>
+                        <div class="box-image-flex">
+                            <img src="https://www.topcv.vn/v4/image/footer/google_for_startup.png?v=1.0.0"
+                                class="img-responsive" alt="" title="">
+                            <img src="https://www.topcv.vn/v4/image/footer/dmca.png?v=1.0.0" class="img-responsive"
+                                alt="" title="">
+                            <a href="http://online.gov.vn/Home/WebDetails/25388" target="_blank">
+                                <img src="https://www.topcv.vn/v4/image/footer/bct.jpg?v=1.0.0"
+                                    class="img-responsive bct-image" alt="" title="">
+                            </a>
+                        </div>
+                        <div class="box-contact">
+                            <p class="title">Liên hệ</p>
+                            <span>Hotline:</span><a href="tel:02466805588">(024) 6680 5588 (Giờ hành chính)</a><br>
+                            <span>Email:</span><a href="mailto:hotro@topcv.vn">hotro@topcv.vn</a>
+                        </div>
+                        <div class="box-download">
+                            <p class="title">Ứng dụng tải xuống</p>
+                            <div class="btn-download-app">
+                                <a target="_blank"
+                                    href="https://itunes.apple.com/us/app/topcv-t%E1%BA%A1o-cv-t%C3%ACm-vi%E1%BB%87c-l%C3%A0m/id1455928592?ls=1&amp;mt=8"><img
+                                        class="img-responsive"
+                                        src="https://www.topcv.vn/v4/image/welcome/download/app_store.png?v=1.0.0"
+                                        alt="Tai app TopCV tai App Store" title="Tải app TopCV tại App Store"></a>
+                                <a target="_blank" href="https://play.google.com/store/apps/details?id=com.topcv"><img
+                                        class="img-responsive"
+                                        src="https://www.topcv.vn/v4/image/welcome/download/chplay.png?v=1.0.0"
+                                        alt="Tai app TopCV tai Google Play" title="Tải app TopCV tại Google Play"></a>
+                            </div>
+                        </div>
+                        <div class="box-social">
+                            <p class="title">Cộng đồng TopCV</p>
+                            <div class="btn-list-social">
+                                <a target="_blank" href="https://www.facebook.com/topcv.vn">
+                                    <img class="img-responsive"
+                                        src="https://www.topcv.vn/v4/image/footer/facebook.png?v=1.0.0">
+                                </a>
+                                <a target="_blank" href="https://www.youtube.com/c/TopCVpro">
+                                    <img class="img-responsive"
+                                        src="https://www.topcv.vn/v4/image/footer/youtube.png?v=1.0.0">
+                                </a>
+                                <a target="_blank" href="https://www.linkedin.com/company/topcv-vietnam">
+                                    <img class="img-responsive"
+                                        src="https://www.topcv.vn/v4/image/footer/linkedin.png?v=1.0.0">
+                                </a>
+                                <a target="_blank" href="https://www.tiktok.com/@topcv">
+                                    <img class="img-responsive"
+                                        src="https://www.topcv.vn/v4/image/footer/tiktok.png?v=1.0.0">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="box-menu-item">
+                            <div class="title">
+                                Về TopCV
+                            </div>
+                            <div class="box-menu-child">
+                                <a target="_blank" href="https://topcv.com.vn/">Giới thiệu</a>
+                                <a target="_blank" href="https://www.topcv.vn/gioi-thieu#bao-chi">Góc báo chí</a>
+                                <a target="_blank"
+                                    href="https://www.topcv.vn/cong-ty/cong-ty-co-phan-topcv-viet-nam/105.html">Tuyển
+                                    dụng</a>
+                                <a target="_blank" href="https://www.topcv.vn/gioi-thieu#lien-he">Liên hệ</a>
+                                <a target="_blank" href="https://www.topcv.vn/faqs">Hỏi đáp</a>
+                                <a target="_blank" href="https://www.topcv.vn/dieu-khoan-bao-mat">Chính sách bảo mật</a>
+                                <a target="_blank" href="https://www.topcv.vn/terms-of-service">Điều khoản dịch vụ</a>
+                                <a href="https://static.topcv.vn/manual/Quy_che_san_TMDT_TopCV.pdf" target="_blank">Quy
+                                    chế hoạt động</a>
+                            </div>
+                        </div>
+                        <div class="box-menu-item">
+                            <div class="title">
+                                Đối tác
+                            </div>
+                            <div class="box-menu-child">
+                                <a href="https://www.testcenter.vn/" target="_blank">TestCenter</a>
+                                <a href="https://tophr.vn" target="_blank">TopHR</a>
+                                <a href="https://www.viecngay.vn/" target="_blank">ViecNgay</a>
+                                <a href="https://happytime.vn/" target="_blank">Happy Time</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="box-menu-item">
+                            <div class="title">
+                                Hồ sơ và CV
+                            </div>
+                            <div class="box-menu-child">
+                                <a href="https://www.topcv.vn/quan-ly-cv" target="_blank">Quản lý CV của bạn</a>
+                                <a href="https://www.topcv.vn/profile" target="_blank">TopCV Profile</a>
+                                <a target="_blank" href="https://www.topcv.vn/viet-cv-the-nao-cho-chuan">Hướng dẫn viết
+                                    CV</a>
+                                <a href="https://www.topcv.vn/mau-cv-theo-nganh-nghe" target="_blank">Thư viện CV theo
+                                    ngành nghề</a>
+                                <a href="https://reviewcv.topcv.vn/" target="_blank">Review CV</a>
+                            </div>
+                        </div>
+                        <div class="box-menu-item">
+                            <div class="title">
+                                Khám phá
+                            </div>
+                            <div class="box-menu-child">
+                                <a href="https://www.topcv.vn/app" target="_blank">Ứng dụng di động TopCV</a>
+                                <a href="https://www.topcv.vn/tinh-luong-gross-net" target="_blank">Tính lương Gross -
+                                    Net</a>
+                                <a href="https://www.topcv.vn/tinh-lai-kep" target="_blank">Tính lãi suất kép</a>
+                                <a href="https://www.topcv.vn/lap-ke-hoach-tiet-kiem" target="_blank">Lập kế hoạch tiết
+                                    kiệm</a>
+                                <a href="https://www.topcv.vn/cong-cu-tinh-muc-huong-bao-hiem-that-nghiep"
+                                    target="_blank">Tính bảo hiểm thất nghiệp</a>
+                                <a href="https://www.topcv.vn/tinh-bao-hiem-xa-hoi-mot-lan" target="_blank">Tính bảo
+                                    hiểm xã hội một lần</a>
+                                <a href="https://www.topcv.vn/trac-nghiem-tinh-cach-mbti" target="_blank">Trắc nghiệm
+                                    MBTI</a>
+                                <a href="https://www.topcv.vn/trac-nghiem-da-tri-thong-minh-multiple-intelligences-test"
+                                    target="_blank">Trắc nghiệm MI</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="box-menu-item">
+                            <div class="title">
+                                Xây dựng sự nghiệp
+                            </div>
+                            <div class="box-menu-child">
+                                <a href="https://www.topcv.vn/viec-lam-tot-nhat" target="_blank">Việc làm tốt nhất</a>
+                                <a href="https://www.topcv.vn/viec-lam-luong-cao" target="_blank">Việc làm lương cao</a>
+                                <a href="https://www.topcv.vn/viec-lam-quan-ly" target="_blank">Việc làm quản lý </a>
+                                <a href="https://www.topcv.vn/viec-lam-it" target="_blank">Việc làm IT </a>
+                                <a href="https://www.topcv.vn/viec-lam-senior" target="_blank">Việc làm Senior</a>
+                                <a href="https://www.topcv.vn/tim-viec-lam-ban-thoi-gian-t3" target="_blank">Việc làm
+                                    bán thời gian</a>
+                            </div>
+                        </div>
+                        <div class="box-menu-item">
+                            <div class="title">
+                                Phát triển bản thân
+                            </div>
+                            <div class="box-menu-child">
+                                <a href="https://contest.topcv.vn/" target="_blank">TopCV Contest</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+
+    <!-- <script src="jquery.min.js"></script> -->
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>

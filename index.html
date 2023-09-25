@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/timkiem.css">
+    <link rel="stylesheet" href="css/detail.css">
+    <link rel="stylesheet" href="css/thongtincanhan.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/fontawesome.css"> -->
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <nav class="navbar ta-top">
+        <div class="container-fluid px-30">
+            <div class="navbar-header">
+                <h1 style="margin: 0;">
+                    <a class="navbar-brand" href="#">
+                        <img src="img/logo.webp" alt="TopCV tuyen dung tai TopCV" title="TopCV tuyển dụng tại TopCV">
+                    </a>
+                </h1>
+            </div>
+            <ul class="nav navbar-nav navbar-left">
+                <li class="navbar-left__item group">
+                    <a href="#">Việc làm</a>
+                </li>
+                <li class="navbar-left__item group">
+                    <a href="#">Hồ sơ & CV</a>
+                </li>
+                <li class="navbar-left__item group">
+                    <a href="#">Công ty</a>
+                </li>
+                <li class="navbar-left__item group">
+                    <a href="#">Phát triển sự nghiệp</a>
+                </li>
+                <li class="navbar-left__item group">
+                    <a href="#">Công cụ</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <!-- notification -->
+                <li id="nav-notification" class="navbar-right__item icon dropdown notification">
+                    <a href="javascript:void(0)" class="dropdown-togglez">
+                        <i class="fa fa-bell" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <!-- message -->
+                <li class="navbar-right__item icon">
+                    <a href="#">
+                        <i class="fa fa-comments-o"></i>
+                    </a>
+                </li>
+                <!-- logo login -->
+                <li class="navbar-right__item group profile-hover">
+                    <div class="title">
+                        <a href="javascript:void(0)">
+                            <img src="/img/anhprofile.jpg" alt="Nguyễn Huy Phúc">
+                            <span class="fullname">Nguyễn Huy Phúc</span>
+                        </a>
+                    </div>
+                    <div class="group-hover:menu navbar__item__dropdown-menu">
+                        <ul class="nav navbar-menu">
+                            <div class="dropdown-menu__info tag-border">
+                                <img src="img/anhprofile.jpg" alt="Nguyễn Huy Phúc">
+                                <div class="caption">
+                                    <p class="name">Nguyễn Huy Phúc</p>
+                                    <p class="description">Mã ứng viên: <span class="code">#abcdsad</span></p>
+                                    <p class="description">sumasa05@gmail.com</p>
+                                </div>
+                            </div>
+                            <li class="navbar-menu__item ">
+                                <a href="#">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                    Thông tin cá nhân
+                                </a>
+                            </li>
+                            <li class="navbar-menu__item ">
+                                <a href="#">
+                                    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                                    Nâng cấp tài khoản vip
+                                </a>
+                            </li>
+                            <li class="navbar-menu__item tag-border">
+                                <a href="#">
+                                    <i class="fa fa-gift" aria-hidden="true"></i>
+                                    Kích hoạt quà tặng
+                                </a>
+                            </li>
+                            <li class="navbar-menu__item ">
+                                <a href="#">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                    Nhà tuyển dụng xem hồ sơ
+                                </a>
+                            </li>
+                            <li class="navbar-menu__item ">
+                                <a href="#">
+                                    <i class="fa fa-cog" aria-hidden="true"></i>
+                                    Cài đặt gợi ý việc làm
+                                </a>
+                            </li>
+                            <li class="navbar-menu__item tag-border">
+                                <a href="#">
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                    Cài đặt nhận email
+                                </a>
+                            </li>
+                            <li class="navbar-menu__item ">
+                                <a href="#">
+                                    <i class="fa fa-shield" aria-hidden="true"></i>
+                                    Cài đặt bảo mật
+                                </a>
+                            </li>
+                            <li class="navbar-menu__item ">
+                                <a href="#">
+                                    <i class="fa fa-lock" aria-hidden="true"></i>
+                                    Đổi mật khẩu
+                                </a>
+                            </li>
+                            <li class="navbar-menu__item menu-logout">
+                                <a href="#">
+                                    <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                    Đăng xuất
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+
+    </nav>
+    <div id="page-welcome">
+        <section id="section-header">
+            <div class="container">
+                <div class="lis-collumn">
+                    <div class="row">
+                        <div class="col">
+                            <h4>Công nghê AI dự đoán, cá nhân hóa việc làm</h4>
+                            <h2><span class="section-title">Công ty phù hợp</span> dành cho bạn</h2>
+                            <form id="frm-search-job" action="" method="get">
+                                <div class="group-search">
+                                    <div class="item item-search">
+                                        <i class="fa fa-search"></i>
+                                        <input class="form-controlui-autocomplete-input ui-autocomplete-input"
+                                            placeholder="Vị trí ứng tuyển" name="keyword" type="text">
+                                    </div>
+                                    <div class="item search-city">
+                                        <div class="icon">
+                                            <i class="fa fa-location"></i>
+                                        </div>
+                                        <select name="city" id="city"
+                                            class="form-control select2 select2-hidden-accessible" tabindex="-1"
+                                            aria-hidden="true">
+                                            <option value="">Tất cả địa điểm</option>
+                                            <option value="1">Hà Nội</option>
+                                            <option value="2">Hồ Chí Minh</option>
+                                            <option value="3">Bình Dương</option>
+                                            <option value="4">Bắc Ninh</option>
+                                            <option value="5">Đồng Nai</option>
+                                            <option value="6">Hưng Yên</option>
+                                            <option value="7">Hải Dương</option>
+                                            <option value="8">Đà Nẵng</option>
+                                            <option value="9">Hải Phòng</option>
+                                            <option value="10">An Giang</option>
+                                            <option value="11">Bà Rịa-Vũng Tàu</option>
+                                            <option value="12">Bắc Giang</option>
+                                            <option value="13">Bắc Kạn</option>
+                                            <option value="14">Bạc Liêu</option>
+                                            <option value="15">Bến Tre</option>
+                                            <option value="16">Bình Định</option>
+                                            <option value="17">Bình Phước</option>
+                                            <option value="18">Bình Thuận</option>
+                                            <option value="19">Cà Mau</option>
+                                            <option value="20">Cần Thơ</option>
+                                            <option value="21">Cao Bằng</option>
+                                            <option value="22">Cửu Long</option>
+                                            <option value="23">Đắk Lắk</option>
+                                            <option value="24">Đắc Nông</option>
+                                            <option value="25">Điện Biên</option>
+                                            <option value="26">Đồng Tháp</option>
+                                            <option value="27">Gia Lai</option>
+                                            <option value="28">Hà Giang</option>
+                                            <option value="29">Hà Nam</option>
+                                            <option value="30">Hà Tĩnh</option>
+                                            <option value="31">Hậu Giang</option>
+                                            <option value="32">Hoà Bình</option>
+                                            <option value="33">Khánh Hoà</option>
+                                            <option value="34">Kiên Giang</option>
+                                            <option value="35">Kon Tum</option>
+                                            <option value="36">Lai Châu</option>
+                                            <option value="37">Lâm Đồng</option>
+                                            <option value="38">Lạng Sơn</option>
+                                            <option value="39">Lào Cai</option>
+                                            <option value="40">Long An</option>
+                                            <option value="41">Miền Bắc</option>
+                                            <option value="42">Miền Nam</option>
+                                            <option value="43">Miền Trung</option>
+                                            <option value="44">Nam Định</option>
+                                            <option value="45">Nghệ An</option>
+                                            <option value="46">Ninh Bình</option>
+                                            <option value="47">Ninh Thuận</option>
+                                            <option value="48">Phú Thọ</option>
+                                            <option value="49">Phú Yên</option>
+                                            <option value="50">Quảng Bình</option>
+                                            <option value="51">Quảng Nam</option>
+                                            <option value="52">Quảng Ngãi</option>
+                                            <option value="53">Quảng Ninh</option>
+                                            <option value="54">Quảng Trị</option>
+                                            <option value="55">Sóc Trăng</option>
+                                            <option value="56">Sơn La</option>
+                                            <option value="57">Tây Ninh</option>
+                                            <option value="58">Thái Bình</option>
+                                            <option value="59">Thái Nguyên</option>
+                                            <option value="60">Thanh Hoá</option>
+                                            <option value="61">Thừa Thiên Huế</option>
+                                            <option value="62">Tiền Giang</option>
+                                            <option value="63">Toàn Quốc</option>
+                                            <option value="64">Trà Vinh</option>
+                                            <option value="65">Tuyên Quang</option>
+                                            <option value="66">Vĩnh Long</option>
+                                            <option value="67">Vĩnh Phúc</option>
+                                            <option value="68">Yên Bái</option>
+                                            <option value="100">Nước Ngoài</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-button">
+                                        <button class="btn btn-topcv btn-search-job">Tìm kiếm</button>
+                                    </div>
+                                </div>
+
+                            </form>
+                            <button class="btn-show-video">
+                                <img class="img-responsive" src="/img/banner.webp" alt="">
+                            </button>
+                        </div>
+                        <div class="col">
+                            <div class="box-demand-job">
+                                <div class="box-demand-job_work-market">
+                                    <div class="work-market_header">
+                                        <span>
+                                            <img src="/img/work_market_star.webp" alt="">
+                                            Thị trường việc làm hôm nay:
+                                        </span>
+                                        <span class="date">10/08/2023</span>
+                                    </div>
+                                    <div class="work-market_content">
+                                        <div class="job-hiring">
+                                            <span>Việc làm đang tuyển</span>
+                                            <span class="quantity" name="quantity_job_recruitment">34.863</span>
+                                            <div class="status up">
+                                                <i class="fa fa-level-up"></i>
+                                            </div>
+                                        </div>
+                                        <div class="job-hiring">
+                                            <span>Việc làm mới hôm nay</span>
+                                            <span class="quantity" name="quantity_job_new_today">3.465</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="header">
+                                    <div class="header-title">
+                                        <img src="/img/trend-hr-chart.webp" alt="">
+                                        <span class="caption">
+                                            Nhu cầu tuyển dụng theo
+                                        </span>
+                                    </div>
+
+                                </div>
+                                <div class="box-chart">
+                                    <canvas id="myChart" style="width:100%;max-width:600px;color: white;"></canvas>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section id="list-feature-jobs">
+            <div class="container">
+                <section id="box-feature-jobs" class="box_general">
+                    <div class="box-header">
+                        <div class="box-header__title">
+                            <h2 class="text_ellipsis uppercase box-title">
+                                Việc làm tốt nhất
+                            </h2>
+                            <div class="box-label"><img src="/img/label-toppy-ai.webp" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row feature_job_item">
+                        <div class="col-md-4 col-sm-6 feature-job job-ta">
+                            <div class="feature-job-item">
+                                <div class="cvo-flex">
+                                    <a href="https://www.topcv.vn/viec-lam/customer-support-shopify-fulltime-chia-ca-remote-linh-hoat-co-base-hmtl-css-co-tieng-anh-thu-nhap-upto-30m/1089134.html?ta_source=BoxFeatureJob_LinkDetail"
+                                        target="_blank" tabindex="0">
+                                        <div class="box-company-logo">
+                                            <div class="avatar"><img
+                                                    title="CÔNG TY CỔ PHẦN DỊCH VỤ VÀ PHÁT TRIỂN CÔNG NGHỆ BEAE VIỆT NAM tuyển dụng tại TopCV"
+                                                    alt="CÔNG TY CỔ PHẦN DỊCH VỤ VÀ PHÁT TRIỂN CÔNG NGHỆ BEAE VIỆT NAM tuyển dụng tại TopCV"
+                                                    src="/img/logo1.webp    "
+                                                    data-src="https://cdn-new.topcv.vn/unsafe/200x/filters:format(webp)/https://static.topcv.vn/company_logos/uqwOQ33ODhCPSdxH82jNGlkKqEB6nlcE_1676513039____132f66db880f7afb05db863d8a597d86.png"
+                                                    class="img-responsive"></div> <!---->
+                                        </div>
+                                    </a>
+                                    <div class="col-title cvo-flex-grow">
+                                        <h3>
+                                            <a data-toggle="tooltip"
+                                                title="Customer Support Shopify Fulltime ( Chia Ca Remote Linh Hoạt, Có Base Hmtl/Css, Có Tiếng Anh, Thu Nhập Upto 30M)"
+                                                data-placement="top"
+                                                href="https://www.topcv.vn/viec-lam/customer-support-shopify-fulltime-chia-ca-remote-linh-hoat-co-base-hmtl-css-co-tieng-anh-thu-nhap-upto-30m/1089134.html?ta_source=BoxFeatureJob_LinkDetail"
+                                                target="_blank" class="title text_ellipsis"
+                                                data-original-title="Sales Logistics/ Kinh Doanh ( Logistics, Hàng Hải, Vận Tải Biển) - Hãng Tàu Vsico"
+                                                tabindex="0"><!----> <!----> <!----> <!----> <!---->
+                                                <strong class="job_title">
+                                                    Customer Support Shopify Fulltime ( Chia Ca Remote Linh Hoạt, Có
+                                                    Base Hmtl/Css, Có Tiếng
+                                                    Anh, Thu Nhập Upto 30M)
+                                                </strong>
+                                            </a>
+                                        </h3>
+
+                                        <a href="https://www.topcv.vn/cong-ty/cong-ty-co-phan-dich-vu-va-phat-trien-cong-nghe-beae-viet-nam/74636.html"
+                                            target="_blank" data-toggle="tooltip"
+                                            title="Customer Support Shopify Fulltime ( Chia Ca Remote Linh Hoạt, Có Base Hmtl/Css, Có Tiếng Anh, Thu Nhập Upto 30M)"
+                                            data-placement="top" data-container="body"
+                                            class="text-silver company text_ellipsis company_name"
+                                            data-original-title="CÔNG TY CỔ PHẦN DỊCH VỤ VÀ PHÁT TRIỂN CÔNG NGHỆ BEAE VIỆT NAM"
+                                            tabindex="0">
+                                            CÔNG TY CỔ PHẦN DỊCH VỤ VÀ PHÁT TRIỂN CÔNG NGHỆ BEAE VIỆT NAM
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="box-footer">
+                                    <div class="col-job-info">
+                                        <div class="salary"><span class="text_ellipsis">10 - 30 triệu</span></div>
+                                        <div data-html="true" data-toggle="tooltip" title="" data-placement="top"
+                                            data-container="body" class="address"
+                                            data-original-title="<p style='text-align: left'>Hà Nội: Cầu Giấy<br/>Hồ Chí Minh</p>">
+                                            <span class="text_ellipsis">Hà Nội, Hồ Chí Minh</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-like"><button data-id="1089134" class="btn-outline-hover save-job"
+                                            tabindex="0"><i class="fa-regular fa-heart icon-first"></i> <i
+                                                class="fa-solid fa-heart icon-last"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 feature-job job-ta">
+                            <div class="feature-job-item">
+                                <div class="cvo-flex">
+                                    <a href="https://www.topcv.vn/viec-lam/customer-support-shopify-fulltime-chia-ca-remote-linh-hoat-co-base-hmtl-css-co-tieng-anh-thu-nhap-upto-30m/1089134.html?ta_source=BoxFeatureJob_LinkDetail"
+                                        target="_blank" tabindex="0">
+                                        <div class="box-company-logo">
+                                            <div class="avatar"><img
+                                                    title="CÔNG TY CỔ PHẦN DỊCH VỤ VÀ PHÁT TRIỂN CÔNG NGHỆ BEAE VIỆT NAM tuyển dụng tại TopCV"
+                                                    alt="CÔNG TY CỔ PHẦN DỊCH VỤ VÀ PHÁT TRIỂN CÔNG NGHỆ BEAE VIỆT NAM tuyển dụng tại TopCV"
+                                                    src="/img/logo1.webp    "
+                                                    data-src="https://cdn-new.topcv.vn/unsafe/200x/filters:format(webp)/https://static.topcv.vn/company_logos/uqwOQ33ODhCPSdxH82jNGlkKqEB6nlcE_1676513039____132f66db880f7afb05db863d8a597d86.png"
+                                                    class="img-responsive"></div> <!---->
+                                        </div>
+                                    </a>
+                                    <div class="col-title cvo-flex-grow">
+                                        <h3>
+                                            <a data-toggle="tooltip"
+                                                title="Customer Support Shopify Fulltime ( Chia Ca Remote Linh Hoạt, Có Base Hmtl/Css, Có Tiếng Anh, Thu Nhập Upto 30M)"
+                                                data-placement="top"
+                                                href="https://www.topcv.vn/viec-lam/customer-support-shopify-fulltime-chia-ca-remote-linh-hoat-co-base-hmtl-css-co-tieng-anh-thu-nhap-upto-30m/1089134.html?ta_source=BoxFeatureJob_LinkDetail"
+                                                target="_blank" class="title text_ellipsis"
+                                                data-original-title="Sales Logistics/ Kinh Doanh ( Logistics, Hàng Hải, Vận Tải Biển) - Hãng Tàu Vsico"
+                                                tabindex="0"><!----> <!----> <!----> <!----> <!---->
+                                                <strong class="job_title">
+                                                    Customer Support Shopify Fulltime ( Chia Ca Remote Linh Hoạt, Có
+                                                    Base Hmtl/Css, Có Tiếng
+                                                    Anh, Thu Nhập Upto 30M)
+                                                </strong>
+                                            </a>
+                                        </h3>
+
+                                        <a href="https://www.topcv.vn/cong-ty/cong-ty-co-phan-dich-vu-va-phat-trien-cong-nghe-beae-viet-nam/74636.html"
+                                            target="_blank" data-toggle="tooltip"
+                                            title="Customer Support Shopify Fulltime ( Chia Ca Remote Linh Hoạt, Có Base Hmtl/Css, Có Tiếng Anh, Thu Nhập Upto 30M)"
+                                            data-placement="top" data-container="body"
+                                            class="text-silver company text_ellipsis company_name"
+                                            data-original-title="CÔNG TY CỔ PHẦN DỊCH VỤ VÀ PHÁT TRIỂN CÔNG NGHỆ BEAE VIỆT NAM"
+                                            tabindex="0">
+                                            CÔNG TY CỔ PHẦN DỊCH VỤ VÀ PHÁT TRIỂN CÔNG NGHỆ BEAE VIỆT NAM
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="box-footer">
+                                    <div class="col-job-info">
+                                        <div class="salary"><span class="text_ellipsis">10 - 30 triệu</span></div>
+                                        <div data-html="true" data-toggle="tooltip" title="" data-placement="top"
+                                            data-container="body" class="address"
+                                            data-original-title="<p style='text-align: left'>Hà Nội: Cầu Giấy<br/>Hồ Chí Minh</p>">
+                                            <span class="text_ellipsis">Hà Nội, Hồ Chí Minh</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-like"><button data-id="1089134" class="btn-outline-hover save-job"
+                                            tabindex="0"><i class="fa-regular fa-heart icon-first"></i> <i
+                                                class="fa-solid fa-heart icon-last"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 feature-job job-ta">
+                            <div class="feature-job-item">
+                                <div class="cvo-flex">
+                                    <a href="https://www.topcv.vn/viec-lam/customer-support-shopify-fulltime-chia-ca-remote-linh-hoat-co-base-hmtl-css-co-tieng-anh-thu-nhap-upto-30m/1089134.html?ta_source=BoxFeatureJob_LinkDetail"
+                                        target="_blank" tabindex="0">
+                                        <div class="box-company-logo">
+                                            <div class="avatar"><img
+                                                    title="CÔNG TY CỔ PHẦN DỊCH VỤ VÀ PHÁT TRIỂN CÔNG NGHỆ BEAE VIỆT NAM tuyển dụng tại TopCV"
+                                                    alt="CÔNG TY CỔ PHẦN DỊCH VỤ VÀ PHÁT TRIỂN CÔNG NGHỆ BEAE VIỆT NAM tuyển dụng tại TopCV"
+                                                    src="/img/logo1.webp    "
+                                                    data-src="https://cdn-new.topcv.vn/unsafe/200x/filters:format(webp)/https://static.topcv.vn/company_logos/uqwOQ33ODhCPSdxH82jNGlkKqEB6nlcE_1676513039____132f66db880f7afb05db863d8a597d86.png"
+                                                    class="img-responsive"></div> <!---->
+                                        </div>
+                                    </a>
+                                    <div class="col-title cvo-flex-grow">
+                                        <h3>
+                                            <a data-toggle="tooltip"
+                                                title="Customer Support Shopify Fulltime ( Chia Ca Remote Linh Hoạt, Có Base Hmtl/Css, Có Tiếng Anh, Thu Nhập Upto 30M)"
+                                                data-placement="top"
+                                                href="https://www.topcv.vn/viec-lam/customer-support-shopify-fulltime-chia-ca-remote-linh-hoat-co-base-hmtl-css-co-tieng-anh-thu-nhap-upto-30m/1089134.html?ta_source=BoxFeatureJob_LinkDetail"
+                                                target="_blank" class="title text_ellipsis"
+                                                data-original-title="Sales Logistics/ Kinh Doanh ( Logistics, Hàng Hải, Vận Tải Biển) - Hãng Tàu Vsico"
+                                                tabindex="0"><!----> <!----> <!----> <!----> <!---->
+                                                <strong class="job_title">
+                                                    Customer Support Shopify Fulltime ( Chia Ca Remote Linh Hoạt, Có
+                                                    Base Hmtl/Css, Có Tiếng
+                                                    Anh, Thu Nhập Upto 30M)
+                                                </strong>
+                                            </a>
+                                        </h3>
+
+                                        <a href="https://www.topcv.vn/cong-ty/cong-ty-co-phan-dich-vu-va-phat-trien-cong-nghe-beae-viet-nam/74636.html"
+                                            target="_blank" data-toggle="tooltip"
+                                            title="Customer Support Shopify Fulltime ( Chia Ca Remote Linh Hoạt, Có Base Hmtl/Css, Có Tiếng Anh, Thu Nhập Upto 30M)"
+                                            data-placement="top" data-container="body"
+                                            class="text-silver company text_ellipsis company_name"
+                                            data-original-title="CÔNG TY CỔ PHẦN DỊCH VỤ VÀ PHÁT TRIỂN CÔNG NGHỆ BEAE VIỆT NAM"
+                                            tabindex="0">
+                                            CÔNG TY CỔ PHẦN DỊCH VỤ VÀ PHÁT TRIỂN CÔNG NGHỆ BEAE VIỆT NAM
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="box-footer">
+                                    <div class="col-job-info">
+                                        <div class="salary"><span class="text_ellipsis">10 - 30 triệu</span></div>
+                                        <div data-html="true" data-toggle="tooltip" title="" data-placement="top"
+                                            data-container="body" class="address"
+                                            data-original-title="<p style='text-align: left'>Hà Nội: Cầu Giấy<br/>Hồ Chí Minh</p>">
+                                            <span class="text_ellipsis">Hà Nội, Hồ Chí Minh</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-like"><button data-id="1089134" class="btn-outline-hover save-job"
+                                            tabindex="0"><i class="fa-regular fa-heart icon-first"></i> <i
+                                                class="fa-solid fa-heart icon-last"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 feature-job job-ta">
+                            <div class="feature-job-item">
+                                <div class="cvo-flex">
+                                    <a href="https://www.topcv.vn/viec-lam/customer-support-shopify-fulltime-chia-ca-remote-linh-hoat-co-base-hmtl-css-co-tieng-anh-thu-nhap-upto-30m/1089134.html?ta_source=BoxFeatureJob_LinkDetail"
+                                        target="_blank" tabindex="0">
+                                        <div class="box-company-logo">
+                                            <div class="avatar"><img
+                                                    title="CÔNG TY CỔ PHẦN DỊCH VỤ VÀ PHÁT TRIỂN CÔNG NGHỆ BEAE VIỆT NAM tuyển dụng tại TopCV"
+                                                    alt="CÔNG TY CỔ PHẦN DỊCH VỤ VÀ PHÁT TRIỂN CÔNG NGHỆ BEAE VIỆT NAM tuyển dụng tại TopCV"
+                                                    src="/img/logo1.webp    "
+                                                    data-src="https://cdn-new.topcv.vn/unsafe/200x/filters:format(webp)/https://static.topcv.vn/company_logos/uqwOQ33ODhCPSdxH82jNGlkKqEB6nlcE_1676513039____132f66db880f7afb05db863d8a597d86.png"
+                                                    class="img-responsive"></div> <!---->
+                                        </div>
+                                    </a>
+                                    <div class="col-title cvo-flex-grow">
+                                        <h3>
+                                            <a data-toggle="tooltip"
+                                                title="Customer Support Shopify Fulltime ( Chia Ca Remote Linh Hoạt, Có Base Hmtl/Css, Có Tiếng Anh, Thu Nhập Upto 30M)"
+                                                data-placement="top"
+                                                href="https://www.topcv.vn/viec-lam/customer-support-shopify-fulltime-chia-ca-remote-linh-hoat-co-base-hmtl-css-co-tieng-anh-thu-nhap-upto-30m/1089134.html?ta_source=BoxFeatureJob_LinkDetail"
+                                                target="_blank" class="title text_ellipsis"
+                                                data-original-title="Sales Logistics/ Kinh Doanh ( Logistics, Hàng Hải, Vận Tải Biển) - Hãng Tàu Vsico"
+                                                tabindex="0"><!----> <!----> <!----> <!----> <!---->
+                                                <strong class="job_title">
+                                                    Customer Support Shopify Fulltime ( Chia Ca Remote Linh Hoạt, Có
+                                                    Base Hmtl/Css, Có Tiếng
+                                                    Anh, Thu Nhập Upto 30M)
+                                                </strong>
+                                            </a>
+                                        </h3>
+
+                                        <a href="https://www.topcv.vn/cong-ty/cong-ty-co-phan-dich-vu-va-phat-trien-cong-nghe-beae-viet-nam/74636.html"
+                                            target="_blank" data-toggle="tooltip"
+                                            title="Customer Support Shopify Fulltime ( Chia Ca Remote Linh Hoạt, Có Base Hmtl/Css, Có Tiếng Anh, Thu Nhập Upto 30M)"
+                                            data-placement="top" data-container="body"
+                                            class="text-silver company text_ellipsis company_name"
+                                            data-original-title="CÔNG TY CỔ PHẦN DỊCH VỤ VÀ PHÁT TRIỂN CÔNG NGHỆ BEAE VIỆT NAM"
+                                            tabindex="0">
+                                            CÔNG TY CỔ PHẦN DỊCH VỤ VÀ PHÁT TRIỂN CÔNG NGHỆ BEAE VIỆT NAM
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="box-footer">
+                                    <div class="col-job-info">
+                                        <div class="salary"><span class="text_ellipsis">10 - 30 triệu</span></div>
+                                        <div data-html="true" data-toggle="tooltip" title="" data-placement="top"
+                                            data-container="body" class="address"
+                                            data-original-title="<p style='text-align: left'>Hà Nội: Cầu Giấy<br/>Hồ Chí Minh</p>">
+                                            <span class="text_ellipsis">Hà Nội, Hồ Chí Minh</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-like"><button data-id="1089134" class="btn-outline-hover save-job"
+                                            tabindex="0"><i class="fa-regular fa-heart icon-first"></i> <i
+                                                class="fa-solid fa-heart icon-last"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 feature-job job-ta">
+                            <div class="feature-job-item">
+                                <div class="cvo-flex">
+                                    <a href="https://www.topcv.vn/viec-lam/customer-support-shopify-fulltime-chia-ca-remote-linh-hoat-co-base-hmtl-css-co-tieng-anh-thu-nhap-upto-30m/1089134.html?ta_source=BoxFeatureJob_LinkDetail"
+                                        target="_blank" tabindex="0">
+                                        <div class="box-company-logo">
+                                            <div class="avatar"><img
+                                                    title="CÔNG TY CỔ PHẦN DỊCH VỤ VÀ PHÁT TRIỂN CÔNG NGHỆ BEAE VIỆT NAM tuyển dụng tại TopCV"
+                                                    alt="CÔNG TY CỔ PHẦN DỊCH VỤ VÀ PHÁT TRIỂN CÔNG NGHỆ BEAE VIỆT NAM tuyển dụng tại TopCV"
+                                                    src="/img/logo1.webp    "
+                                                    data-src="https://cdn-new.topcv.vn/unsafe/200x/filters:format(webp)/https://static.topcv.vn/company_logos/uqwOQ33ODhCPSdxH82jNGlkKqEB6nlcE_1676513039____132f66db880f7afb05db863d8a597d86.png"
+                                                    class="img-responsive"></div> <!---->
+                                        </div>
+                                    </a>
+                                    <div class="col-title cvo-flex-grow">
+                                        <h3>
+                                            <a data-toggle="tooltip"
+                                                title="Customer Support Shopify Fulltime ( Chia Ca Remote Linh Hoạt, Có Base Hmtl/Css, Có Tiếng Anh, Thu Nhập Upto 30M)"
+                                                data-placement="top"
+                                                href="https://www.topcv.vn/viec-lam/customer-support-shopify-fulltime-chia-ca-remote-linh-hoat-co-base-hmtl-css-co-tieng-anh-thu-nhap-upto-30m/1089134.html?ta_source=BoxFeatureJob_LinkDetail"
+                                                target="_blank" class="title text_ellipsis"
+                                                data-original-title="Sales Logistics/ Kinh Doanh ( Logistics, Hàng Hải, Vận Tải Biển) - Hãng Tàu Vsico"
+                                                tabindex="0"><!----> <!----> <!----> <!----> <!---->
+                                                <strong class="job_title">
+                                                    Customer Support Shopify Fulltime ( Chia Ca Remote Linh Hoạt, Có
+                                                    Base Hmtl/Css, Có Tiếng
+                                                    Anh, Thu Nhập Upto 30M)
+                                                </strong>
+                                            </a>
+                                        </h3>
+
+                                        <a href="https://www.topcv.vn/cong-ty/cong-ty-co-phan-dich-vu-va-phat-trien-cong-nghe-beae-viet-nam/74636.html"
+                                            target="_blank" data-toggle="tooltip"
+                                            title="Customer Support Shopify Fulltime ( Chia Ca Remote Linh Hoạt, Có Base Hmtl/Css, Có Tiếng Anh, Thu Nhập Upto 30M)"
+                                            data-placement="top" data-container="body"
+                                            class="text-silver company text_ellipsis company_name"
+                                            data-original-title="CÔNG TY CỔ PHẦN DỊCH VỤ VÀ PHÁT TRIỂN CÔNG NGHỆ BEAE VIỆT NAM"
+                                            tabindex="0">
+                                            CÔNG TY CỔ PHẦN DỊCH VỤ VÀ PHÁT TRIỂN CÔNG NGHỆ BEAE VIỆT NAM
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="box-footer">
+                                    <div class="col-job-info">
+                                        <div class="salary"><span class="text_ellipsis">10 - 30 triệu</span></div>
+                                        <div data-html="true" data-toggle="tooltip" title="" data-placement="top"
+                                            data-container="body" class="address"
+                                            data-original-title="<p style='text-align: left'>Hà Nội: Cầu Giấy<br/>Hồ Chí Minh</p>">
+                                            <span class="text_ellipsis">Hà Nội, Hồ Chí Minh</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-like"><button data-id="1089134" class="btn-outline-hover save-job"
+                                            tabindex="0"><i class="fa-regular fa-heart icon-first"></i> <i
+                                                class="fa-solid fa-heart icon-last"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 feature-job job-ta">
+                            <div class="feature-job-item">
+                                <div class="cvo-flex">
+                                    <a href="https://www.topcv.vn/viec-lam/customer-support-shopify-fulltime-chia-ca-remote-linh-hoat-co-base-hmtl-css-co-tieng-anh-thu-nhap-upto-30m/1089134.html?ta_source=BoxFeatureJob_LinkDetail"
+                                        target="_blank" tabindex="0">
+                                        <div class="box-company-logo">
+                                            <div class="avatar"><img
+                                                    title="CÔNG TY CỔ PHẦN DỊCH VỤ VÀ PHÁT TRIỂN CÔNG NGHỆ BEAE VIỆT NAM tuyển dụng tại TopCV"
+                                                    alt="CÔNG TY CỔ PHẦN DỊCH VỤ VÀ PHÁT TRIỂN CÔNG NGHỆ BEAE VIỆT NAM tuyển dụng tại TopCV"
+                                                    src="/img/logo1.webp    "
+                                                    data-src="https://cdn-new.topcv.vn/unsafe/200x/filters:format(webp)/https://static.topcv.vn/company_logos/uqwOQ33ODhCPSdxH82jNGlkKqEB6nlcE_1676513039____132f66db880f7afb05db863d8a597d86.png"
+                                                    class="img-responsive"></div> <!---->
+                                        </div>
+                                    </a>
+                                    <div class="col-title cvo-flex-grow">
+                                        <h3>
+                                            <a data-toggle="tooltip"
+                                                title="Customer Support Shopify Fulltime ( Chia Ca Remote Linh Hoạt, Có Base Hmtl/Css, Có Tiếng Anh, Thu Nhập Upto 30M)"
+                                                data-placement="top"
+                                                href="https://www.topcv.vn/viec-lam/customer-support-shopify-fulltime-chia-ca-remote-linh-hoat-co-base-hmtl-css-co-tieng-anh-thu-nhap-upto-30m/1089134.html?ta_source=BoxFeatureJob_LinkDetail"
+                                                target="_blank" class="title text_ellipsis"
+                                                data-original-title="Sales Logistics/ Kinh Doanh ( Logistics, Hàng Hải, Vận Tải Biển) - Hãng Tàu Vsico"
+                                                tabindex="0"><!----> <!----> <!----> <!----> <!---->
+                                                <strong class="job_title">
+                                                    Customer Support Shopify Fulltime ( Chia Ca Remote Linh Hoạt, Có
+                                                    Base Hmtl/Css, Có Tiếng
+                                                    Anh, Thu Nhập Upto 30M)
+                                                </strong>
+                                            </a>
+                                        </h3>
+
+                                        <a href="https://www.topcv.vn/cong-ty/cong-ty-co-phan-dich-vu-va-phat-trien-cong-nghe-beae-viet-nam/74636.html"
+                                            target="_blank" data-toggle="tooltip"
+                                            title="Customer Support Shopify Fulltime ( Chia Ca Remote Linh Hoạt, Có Base Hmtl/Css, Có Tiếng Anh, Thu Nhập Upto 30M)"
+                                            data-placement="top" data-container="body"
+                                            class="text-silver company text_ellipsis company_name"
+                                            data-original-title="CÔNG TY CỔ PHẦN DỊCH VỤ VÀ PHÁT TRIỂN CÔNG NGHỆ BEAE VIỆT NAM"
+                                            tabindex="0">
+                                            CÔNG TY CỔ PHẦN DỊCH VỤ VÀ PHÁT TRIỂN CÔNG NGHỆ BEAE VIỆT NAM
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="box-footer">
+                                    <div class="col-job-info">
+                                        <div class="salary"><span class="text_ellipsis">10 - 30 triệu</span></div>
+                                        <div data-html="true" data-toggle="tooltip" title="" data-placement="top"
+                                            data-container="body" class="address"
+                                            data-original-title="<p style='text-align: left'>Hà Nội: Cầu Giấy<br/>Hồ Chí Minh</p>">
+                                            <span class="text_ellipsis">Hà Nội, Hồ Chí Minh</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-like"><button data-id="1089134" class="btn-outline-hover save-job"
+                                            tabindex="0"><i class="fa-regular fa-heart icon-first"></i> <i
+                                                class="fa-solid fa-heart icon-last"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-job-page">
+                        <div class="content">
+                            <span class="btn-feature-jobs-pre btn-slick-arrow slick-arrow" aria-disabled="false"
+                                style="display: flex;">
+                                <i class="fa fa-chevron-left"></i>
+                            </span>
+                            <div class="feature-job-page__text">
+                                <p class="slick-pagination"><span class="hight-light">10</span> / 24 trang</p>
+                            </div>
+                            <span class="btn-feature-jobs-pre btn-slick-arrow slick-arrow" aria-disabled="false"
+                                style="display: flex;">
+                                <i class="fa fa-chevron-right"></i>
+                            </span>
+                        </div>
+                    </div>
+            </div>
+        </section>
+        <div class="top-company">
+            <div class="container">
+                <div class="top-company__header">
+                    <div class="top-company__header">
+                        <h2 class="top-company__title">Top Công ty hàng đầu</h2>
+                    </div>
+                </div>
+                <div id="slider-company">
+                    <div class="slider">
+                        <div class="slider-items">
+                            <div class="slider-item">
+                                <img src="/img/logo1.webp" alt="Item 1">
+                                <h3 class="slide-name-company">Đây là công ty 1</h3>
+                                <label for="" class="top-company__badge">6 việc làm</label>
+                                
+                                <div class="top-company__wrap-btn follow">
+                                    <button data-id="90544" class="top-company__btn top-company__btn-unfollow">
+                                        Đang theo dõi
+                                    </button>
+                                    <button data-id="7853" class="top-company__btn top-company__btn-follow"><i
+                                            class="fa fa-plus"></i>
+                                        Theo dõi
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="slider-item">
+                                <img src="/img/logo1.webp" alt="Item 1">
+                                <h3 class="slide-name-company">Đây là công ty 1</h3>
+                                <label for="" class="top-company__badge">6 việc làm</label>
+                                
+                                <div class="top-company__wrap-btn follow">
+                                    <button data-id="90544" class="top-company__btn top-company__btn-unfollow">
+                                        Đang theo dõi
+                                    </button>
+                                    <button data-id="7853" class="top-company__btn top-company__btn-follow"><i
+                                            class="fa fa-plus"></i>
+                                        Theo dõi
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="slider-item">
+                                <img src="/img/logo1.webp" alt="Item 1">
+                                <h3 class="slide-name-company">Đây là công ty 1</h3>
+                                <label for="" class="top-company__badge">6 việc làm</label>
+                                
+                                <div class="top-company__wrap-btn follow">
+                                    <button data-id="90544" class="top-company__btn top-company__btn-unfollow">
+                                        Đang theo dõi
+                                    </button>
+                                    <button data-id="7853" class="top-company__btn top-company__btn-follow"><i
+                                            class="fa fa-plus"></i>
+                                        Theo dõi
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="slider-item">
+                                <img src="/img/logo1.webp" alt="Item 1">
+                                <h3 class="slide-name-company">Đây là công ty 1</h3>
+                                <label for="" class="top-company__badge">6 việc làm</label>
+                                <div class="top-company__wrap-btn follow">
+                                    <button data-id="7853" class="top-company__btn top-company__btn-follow"><i
+                                            class="fa fa-plus"></i>
+                                        Theo dõi
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="slider-item">
+                                <img src="/img/logo1.webp" alt="Item 1">
+                                <h3 class="slide-name-company">Đây là công ty 1</h3>
+                                <label for="" class="top-company__badge">6 việc làm</label>
+                                <div class="top-company__wrap-btn follow">
+                                    <button data-id="7853" class="top-company__btn top-company__btn-follow"><i
+                                            class="fa fa-plus"></i>
+                                        Theo dõi
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="slider-item">
+                                <img src="/img/logo1.webp" alt="Item 1">
+                                <h3 class="slide-name-company">Đây là công ty 1</h3>
+                                <label for="" class="top-company__badge">6 việc làm</label>
+                                <div class="top-company__wrap-btn follow">
+                                    <button data-id="7853" class="top-company__btn top-company__btn-follow"><i
+                                            class="fa fa-plus"></i>
+                                        Theo dõi
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="slider-controls">
+                        <button class="prev-button">
+                            <i class="fa fa-chevron-left"></i>
+                        </button>
+                        <button class="next-button">
+                            <i class="fa fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="top-category">
+            <div class="container">
+                <div class="top-category__header">
+                    <div class="top-category__box-title">
+                        <h2 class="top-category__title">Top ngành nghề nổi bật</h2>
+                        <p>Bạn muốn tìm việc mới? Xem danh sách việc làm <a target="_blank"
+                                href="https://www.topcv.vn/viec-lam" class="text-highlight text-underline">tại đây</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="top-category__body">
+                    <div class="slider-category">
+                        <div class="slider-items-category">
+                            <div class="slider-item-category">
+                                <a href="#">
+                                    <img src="/img/kinh-doanh-ban-hang.webp" alt="Item 1">
+                                    <h3 class="slide-name-company">Kinh doanh / bán hàng</h3>
+                                    <p class="top-category__caption">13.099 việc làm</p>
+                                </a>
+                            </div>
+                            <div class="slider-item-category">
+                                <a href="#">
+                                    <img src="/img/it-phan-mem.webp" alt="Item 1">
+                                    <h3 class="slide-name-company">Đây là công ty 1</h3>
+                                    <p class="top-category__caption">13.099 việc làm</p>
+                                </a>
+                            </div>
+                            <div class="slider-item-category">
+                                <a href="#">
+                                    <img src="/img/hanh-chinh-van-phong.webp" alt="Item 1">
+                                    <h3 class="slide-name-company">Kinh doanh / bán hàng</h3>
+                                    <p class="top-category__caption">13.099 việc làm</p>
+                                </a>
+                            </div>
+                            <div class="slider-item-category">
+                                <a href="#">
+                                    <img src="/img/it-phan-mem.webp" alt="Item 1">
+                                    <h3 class="slide-name-company">Đây là công ty 1</h3>
+                                    <p class="top-category__caption">13.099 việc làm</p>
+                                </a>
+                            </div>
+                            <div class="slider-item-category">
+                                <a href="#">
+                                    <img src="/img/kinh-doanh-ban-hang.webp" alt="Item 1">
+                                    <h3 class="slide-name-company">Kinh doanh / bán hàng</h3>
+                                    <p class="top-category__caption">13.099 việc làm</p>
+                                </a>
+                            </div>
+                            <div class="slider-item-category">
+                                <a href="#">
+                                    <img src="/img/it-phan-mem.webp" alt="Item 1">
+                                    <h3 class="slide-name-company">Đây là công ty 1</h3>
+                                    <p class="top-category__caption">13.099 việc làm</p>
+                                </a>
+                            </div>
+                            <div class="slider-item-category">
+                                <a href="#">
+                                    <img src="/img/kinh-doanh-ban-hang.webp" alt="Item 1">
+                                    <h3 class="slide-name-company">Kinh doanh / bán hàng</h3>
+                                    <p class="top-category__caption">13.099 việc làm</p>
+                                </a>
+                            </div>
+                            <div class="slider-item-category">
+                                <a href="#">
+                                    <img src="/img/it-phan-mem.webp" alt="Item 1">
+                                    <h3 class="slide-name-company">Đây là công ty 1</h3>
+                                    <p class="top-category__caption">13.099 việc làm</p>
+                                </a>
+                            </div>
+                            <div class="slider-item-category">
+                                <a href="#">
+                                    <img src="/img/kinh-doanh-ban-hang.webp" alt="Item 1">
+                                    <h3 class="slide-name-company">Kinh doanh / bán hàng</h3>
+                                    <p class="top-category__caption">13.099 việc làm</p>
+                                </a>
+                            </div>
+                            <div class="slider-item-category">
+                                <a href="#">
+                                    <img src="/img/it-phan-mem.webp" alt="Item 1">
+                                    <h3 class="slide-name-company">Đây là công ty 1</h3>
+                                    <p class="top-category__caption">13.099 việc làm</p>
+                                </a>
+                            </div>
+                            <div class="slider-item-category">
+                                <a href="#">
+                                    <img src="/img/kinh-doanh-ban-hang.webp" alt="Item 1">
+                                    <h3 class="slide-name-company">Kinh doanh / bán hàng</h3>
+                                    <p class="top-category__caption">13.099 việc làm</p>
+                                </a>
+                            </div>
+                            <div class="slider-item-category">
+                                <a href="#">
+                                    <img src="/img/it-phan-mem.webp" alt="Item 1">
+                                    <h3 class="slide-name-company">Đây là công ty 1</h3>
+                                    <p class="top-category__caption">13.099 việc làm</p>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="slider-controls">
+                        <button class="prev-button-category">
+                            <i class="fa fa-chevron-left"></i>
+                        </button>
+                        <button class="next-button-category">
+                            <i class="fa fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section id="self-growth" class="self-growth">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 self-growth__item">
+                        <h2 class="self-growth__title">Cùng TopCV xây dựng thương hiệu cá nhân</h2>
+                        <div class="self-growth__content">
+                            <div class="self-growth__content--item">
+                                <div class="content">
+                                    <h3>
+                                        TopCV Profile
+                                    </h3>
+                                    <p>
+                                        TopCV Profile là bản hồ sơ năng lực giúp bạn xây dựng thương hiệu cá nhân, thể
+                                        hiện
+                                        thế mạnh của bản thân thông qua việc đính kèm học vấn, kinh nghiệm, dự án, kỹ
+                                        năng,... của mình
+                                    </p>
+                                    <a class="btn btn-success btn-growth" href="#">
+                                        Tạo Profile &nbsp;
+                                        <i class="fa fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                                <div class="box-image">
+                                    <img src="/img/profile-desktop.webp" alt="anh">
+                                </div>
+                            </div>
+                            <div class="self-growth__content--item">
+                                <div class="content">
+                                    <h3>
+                                        CV Builder 2.0
+                                    </h3>
+                                    <p>
+                                        Một chiếc CV chuyên nghiệp sẽ giúp bạn gây ấn tượng với nhà tuyển dụng và tăng
+                                        khả
+                                        năng vượt qua vòng lọc CV.
+                                    </p>
+                                    <a class="btn btn-success btn-growth" href="#">
+                                        Tạo CV ngay
+                                        <i class="fa fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                                <div class="box-image">
+                                    <img src="/img/cv-builder-desktop.webp" alt="arnh">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 self-growth__item">
+                        <h2 class="self-growth__title">Thấu hiểu bản thân - Nâng tầm giá trị</h2>
+                        <div class="self-growth__content">
+                            <div class="self-growth__content--item">
+                                <div class="content">
+                                    <h3>
+                                        Trắc nghiệm tính cách MBTI
+                                    </h3>
+                                    <p>
+                                        Kết quả trắc nghiệm MBTI chỉ ra cách bạn nhận thức thế giới xung quanh và ra
+                                        quyết định
+                                        trong cuộc sống, từ đó, giúp bạn có thêm thông tin để lựa chọn nghề nghiệp chính
+                                        xác
+                                        hơn.
+                                    </p>
+                                    <a class="btn btn-success btn-growth" href="#" target="_blank">
+                                        Khám phá ngay
+                                        <i class="fa fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                                <div class="box-image">
+                                    <img src="/img/mbti-desktop.webp" alt="arnh">
+                                </div>
+                            </div>
+                            <div class="self-growth__content--item">
+                                <div class="content">
+                                    <h3>
+                                        Trắc nghiệm đa trí thông minh MI
+                                    </h3>
+                                    <p>
+                                        Trả lời cho câu hỏi “Bạn có trí thông minh nổi trội trong lĩnh vực nào?”, từ đó
+                                        bạn có
+                                        thể hiểu bản thân mình hơn và đưa ra các quyết định nghề nghiệp phù hợp.
+                                    </p>
+                                    <a class="btn btn-success btn-growth" href="#" target="_blank">
+                                        Khám phá ngay
+                                        <i class="fa fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                                <div class="box-image">
+                                    <img src="/img/mi-desktop.webp" alt="arnh">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="mobile-app-intro">
+            <div class="container">
+                <div class="section-left">
+                    <h2 class="title">Kiến tạo sự nghiệp của riêng bạn với ứng dụng TopCV&nbsp;</h2>
+                    <h3>“Tất cả trong một”</h3>
+                    <p>Trải nghiệm tạo CV, tìm việc, ứng tuyển và hơn thế nữa - chỉ với một ứng dụng duy nhất. Bắt đầu
+                        ngay hôm nay!</p>
+                    <div class="box-qr-download">
+                        <h3>Tải ứng dụng ngay</h3>
+                        <div class="box-imgs">
+                            <div class="box-img-qr">
+                                <img src="/img/qrcode_black.webp" alt="">
+                            </div>
+                            <div class="box-img-download-app">
+                                <a href="https://itunes.apple.com/us/app/topcv-t%E1%BA%A1o-cv-t%C3%ACm-vi%E1%BB%87c-l%C3%A0m/id1455928592?ls=1&amp;mt=8"
+                                    class="box-img-download-appstore">
+                                    <img src="/img/appstore_black.webp" alt="">
+                                </a>
+                                <a href="https://play.google.com/store/apps/details?id=com.topcv"
+                                    class="box-img-download-chplay">
+                                    <img src="/img/googleplay_black.webp" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-right">
+                </div>
+            </div>
+        </section>
+        <section id="newspapers-talk-about-topcv">
+            <div class="container">
+                <h2>Báo chí nói về TopCV</h2>
+                <div class="box-image">
+                    <div class="box-image-item">
+                        <a target="_blank"
+                            href="https://vietnambiz.vn/topcv-va-thuocsi-la-2-startup-viet-duoc-google-ho-tro-tang-toc-khoi-nghiep-20200807110033455.htm"><img
+                                src="https://www.topcv.vn/v4/image/welcome/logo_bao_chi_01.png" class="img-responsive"
+                                title="Vietnambiz bài viết về TopCV" alt="Vietnambiz bai viet ve TopCV"></a>
+                    </div>
+                    <div class="box-image-item">
+                        <a target="_blank"
+                            href="https://cafebiz.vn/topcv-nhan-cu-dup-giai-thuong-sao-khue-2021-202104271838343.chn"><img
+                                src="https://www.topcv.vn/v4/image/welcome/logo_bao_chi_02.png" class="img-responsive"
+                                title="Cafebiz bài viết về TopCV" alt="Cafebiz bai viet ve TopCV"></a>
+                    </div>
+                    <div class="box-image-item">
+                        <a target="_blank"
+                            href="https://baodautu.vn/goi-von-trieu-do-topcv-tap-trung-phat-trien-cong-nghe-gia-tang-hieu-qua-tuyen-dung-d147798.html"><img
+                                src="https://www.topcv.vn/v4/image/welcome/logo_bao_chi_03.png" class="img-responsive"
+                                title="Dau tu Online bai viet ve TopCV"></a>
+                    </div>
+                    <div class="box-image-item">
+                        <a target="_blank"
+                            href="https://genk.vn/topcv-va-no-luc-thay-doi-thi-truong-tuyen-dung-viet-nam-20170328123950793.chn"><img
+                                src="https://www.topcv.vn/v4/image/welcome/logo_bao_chi_04.png" class="img-responsive"
+                                title="GenK bài viết về TopCV" alt="GenK bai viet ve TopCV"></a>
+                    </div>
+                    <div class="box-image-item">
+                        <a target="_blank"
+                            href="https://kenh14.vn/tao-cv-ha-guc-nha-tuyen-dung-chi-trong-mot-buoc-20210301205913038.chn"><img
+                                src="https://www.topcv.vn/v4/image/welcome/logo_bao_chi_05.png" class="img-responsive"
+                                title="Kenh14 bài viết về TopCV" alt="Kenh14 bai viet ve TopCV"></a>
+                    </div>
+                    <div class="box-image-item">
+                        <a target="_blank"
+                            href="https://theleader.vn/chien-luoc-thu-hut-nhan-tai-thoi-ky-vang-hau-covid-19-1593484912759.htm"><img
+                                src="https://www.topcv.vn/v4/image/welcome/logo_bao_chi_06.png" class="img-responsive"
+                                title="The Leader bài viết về TopCV" alt="The Leader bai viet ve TopCV"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer id="footer-desktop">
+        <div class="footer-common-search-keywords">
+            <div class="container keyword-seo">
+                <a target="_blank" href="https://www.topcv.vn/cv-la-gi">cv là gì</a>
+                <a target="_blank" href="https://www.topcv.vn/mau-cv">Mẫu CV</a>
+                <a target="_blank" href="https://www.topcv.vn/mau-cv">mẫu cv tiếng việt</a>
+                <a target="_blank" href="https://www.topcv.vn/tai-mau-so-yeu-ly-lich-chuan-mien-phi">Sơ yếu lý lịch</a>
+                <a target="_blank" href="https://www.topcv.vn/tong-hop-cv-tham-khao-cac-nhom-nganh">CV tham khảo</a>
+                <a target="_blank" href="https://www.topcv.vn/tong-hop-cv-tham-khao-cho-lap-trinh-vien">tổng hợp CV tham
+                    khảo cho lập trình viên</a>
+                <a target="_blank" href="https://www.topcv.vn/giay-to-thu-tuc-ho-so-xin-viec">giấy tờ thủ tục hồ sơ xin
+                    việc</a>
+                <a target="_blank" href="https://www.topcv.vn/cach-viet-email-xin-viec-bang-tieng-anh">Email xin việc
+                    bằng tiếng anh</a>
+                <a target="_blank" href="https://www.topcv.vn/mau-don-xin-viec">Mẫu đơn xin việc</a>
+                <a target="_blank" href="https://www.topcv.vn/mau-don-xin-nghi-viec">mẫu đơn xin nghỉ việc</a>
+                <a target="_blank" href="https://www.topcv.vn/mau-don-xin-nghi-phep">Cách viết đơn xin nghỉ phép</a>
+                <a target="_blank" href="https://www.topcv.vn/viet-cv-the-nao-cho-chuan">Cách viết CV xin việc</a>
+                <a target="_blank" href="https://www.topcv.vn/viet-cv-nganh-kinh-doanh-ban-hang-nhu-the-nao">cách viết
+                    CV Ngành Kinh doanh/Bán hàng</a>
+                <a target="_blank" href="https://www.topcv.vn/cach-viet-cv-nganh-ke-toan-kiem-toan">cách viết CV Ngành
+                    Kế Toán/Kiểm Toán</a>
+                <a target="_blank" href="https://www.topcv.vn/cach-viet-cv-nganh-nhan-su">cách viết CV Ngành Nhân Sự</a>
+                <a target="_blank" href="https://www.topcv.vn/huong-dan-viet-cv-xin-hoc-bong">cách viết CV xin Học
+                    bổng</a>
+                <a target="_blank" href="https://www.topcv.vn/huong-dan-viet-cv-xin-viec-tieng-anh">cách viết CV Tiếng
+                    Anh</a>
+                <a target="_blank" href="https://www.topcv.vn/huong-dan-viet-cv-tieng-nhat">cách viết CV Tiếng Nhật</a>
+                <a target="_blank" href="https://www.topcv.vn/huong-dan-viet-cv-tieng-trung">cách viết CV Tiếng
+                    Trung</a>
+                <a target="_blank" href="https://www.topcv.vn/huong-dan-viet-cv-tieng-han">cách viết CV Tiếng Hàn</a>
+                <a target="_blank" href="https://www.topcv.vn/cam-nang-nam-nhat-danh-cho-sinh-vien">cẩm nang năm nhất
+                    cho sinh viên</a>
+                <a target="_blank" href="https://www.topcv.vn/mau-don-xin-thuc-tap-chuan-cho-sinh-vien">Mẫu đơn xin thực
+                    tập</a>
+                <a target="_blank" href="https://www.topcv.vn/huong-dan-sua-loi-go-tieng-viet-unikey">Hướng dẫn sửa lỗi
+                    gõ tiếng Việt</a>
+                <a target="_blank" href="https://www.topcv.vn/nganh-du-lich-lam-nhung-cong-viec-gi">Ngành du lịch làm
+                    việc gì</a>
+                <a target="_blank" href="https://www.topcv.vn/cam-nang-xin-viec-nganh-nhan-su">Cẩm nang xin việc ngành
+                    nhân sự</a>
+                <a target="_blank" href="https://www.topcv.vn/xin-viec-nganh-cong-nghe-thong-tin">Xin việc ngành công
+                    nghệ thông tin</a>
+                <a target="_blank" href="https://www.topcv.vn/cam-nang-xin-viec-nganh-marketing">Cẩm nang xin việc ngành
+                    marketing</a>
+                <a target="_blank" href="https://www.topcv.vn/xin-viec-nganh-ke-toan-kiem-toan">Cẩm nang xin việc ngành
+                    kế toán kiểm toán </a>
+                <a target="_blank" href="https://www.topcv.vn/xin-viec-nganh-cong-nghe-thuc-pham">Cẩm nang xin việc
+                    ngành công nghệ thực phẩm</a>
+                <a target="_blank" href="https://www.topcv.vn/cam-nang-xin-viec-nganh-tai-chinh-ngan-hang">Cẩm nang xin
+                    việc ngành tài chính ngân hàng</a>
+                <a target="_blank" href="https://www.topcv.vn/xin-viec-nganh-luat">Cẩm nang xin việc ngành luật</a>
+                <a target="_blank" href="https://www.topcv.vn/xin-viec-nganh-xay-dung-dia-oc">Cẩm nang xin việc ngành
+                    xây dựng - địa ốc</a>
+                <a target="_blank" href="https://www.topcv.vn/trac-nghiem-tinh-cach-mbti">Trắc nghiệm tính cách MBTI</a>
+                <a target="_blank" href="https://www.topcv.vn/viec-lam-remote">Việc làm online tại nhà</a>
+                <a target="_blank" href="https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-ho-chi-minh-l2">Tìm việc làm tại
+                    TP. HCM</a>
+                <a target="_blank" href="https://www.topcv.vn/mau-cover-letter-thu-xin-viec">Cách viết cover letter xin
+                    việc</a>
+                <a target="_blank" href="https://www.topcv.vn/huong-dan-viet-cv-xin-viec-tieng-anh">CV xin việc bằng
+                    tiếng Anh</a>
+                <a target="_blank" href="https://www.topcv.vn/cv-cho-sinh-vien-chua-tot-nghiep">CV cho sinh viên chưa
+                    tốt nghiệp</a>
+                <a target="_blank" href="https://www.topcv.vn/tim-viec-lam-hanh-chinh-nhan-su">Việc làm hành chính nhân
+                    sự</a>
+                <a target="_blank" href="https://www.topcv.vn/huong-dan-viet-cv-tieng-trung">Thư xin việc bằng tiếng
+                    Anh</a>
+                <a target="_blank" href="https://www.topcv.vn/cong-viec-nganh-logistic">Ngành logistic là gì</a>
+                <a target="_blank" href="https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-hai-phong-l9">Việc làm Hải
+                    Phòng</a>
+                <a target="_blank" href="https://www.topcv.vn/tim-viec-lam-moi-nhat-tai-binh-dinh-l16">Việc làm Bình
+                    Định</a>
+                <a target="_blank" href="https://www.topcv.vn/tim-viec-lam-content-marketing">Tuyển dụng Content
+                    Marketing</a>
+                <a target="_blank" href="https://www.topcv.vn/tim-viec-lam-lap-trinh-vien-php">Tuyển lập trình viên
+                    PHP</a>
+                <a target="_blank" href="https://www.topcv.vn/tim-viec-lam-lap-trinh-vien-java">Tuyển lập trình viên
+                    Java</a>
+                <a target="_blank" href="https://www.topcv.vn/tim-viec-lam-lap-trinh-vien-net">Tuyển lập trình viên
+                    .Net</a>
+                <a target="_blank" href="https://www.topcv.vn/tim-viec-lam-nhan-vien-kinh-doanh">Tuyển dụng nhân viên
+                    kinh doanh</a>
+                <a target="_blank" href="https://www.topcv.vn/tim-viec-lam-nhan-vien-marketing">Tuyển dụng nhân viên
+                    marketing</a>
+                <a target="_blank" href="https://www.topcv.vn/tim-viec-lam-nhan-vien-ke-toan">Tìm việc kế toán</a>
+            </div>
+        </div>
+        <div class="footer-main">
+            <div class="container">
+                <div class="box-main">
+                    <div class="column">
+                        <a href="https://www.topcv.vn">
+                            <img src="https://www.topcv.vn/v3/images/topcv-logo-4.png?v=1.0.1"
+                                class="img-logo-footer img-responsive" alt="TopCV tuyen dung tai TopCV"
+                                title="TopCV tuyển dụng tại TopCV">
+                        </a>
+                        <div class="box-image-flex">
+                            <img src="https://www.topcv.vn/v4/image/footer/google_for_startup.png?v=1.0.0"
+                                class="img-responsive" alt="" title="">
+                            <img src="https://www.topcv.vn/v4/image/footer/dmca.png?v=1.0.0" class="img-responsive"
+                                alt="" title="">
+                            <a href="http://online.gov.vn/Home/WebDetails/25388" target="_blank">
+                                <img src="https://www.topcv.vn/v4/image/footer/bct.jpg?v=1.0.0"
+                                    class="img-responsive bct-image" alt="" title="">
+                            </a>
+                        </div>
+                        <div class="box-contact">
+                            <p class="title">Liên hệ</p>
+                            <span>Hotline:</span><a href="tel:02466805588">(024) 6680 5588 (Giờ hành chính)</a><br>
+                            <span>Email:</span><a href="mailto:hotro@topcv.vn">hotro@topcv.vn</a>
+                        </div>
+                        <div class="box-download">
+                            <p class="title">Ứng dụng tải xuống</p>
+                            <div class="btn-download-app">
+                                <a target="_blank"
+                                    href="https://itunes.apple.com/us/app/topcv-t%E1%BA%A1o-cv-t%C3%ACm-vi%E1%BB%87c-l%C3%A0m/id1455928592?ls=1&amp;mt=8"><img
+                                        class="img-responsive"
+                                        src="https://www.topcv.vn/v4/image/welcome/download/app_store.png?v=1.0.0"
+                                        alt="Tai app TopCV tai App Store" title="Tải app TopCV tại App Store"></a>
+                                <a target="_blank" href="https://play.google.com/store/apps/details?id=com.topcv"><img
+                                        class="img-responsive"
+                                        src="https://www.topcv.vn/v4/image/welcome/download/chplay.png?v=1.0.0"
+                                        alt="Tai app TopCV tai Google Play" title="Tải app TopCV tại Google Play"></a>
+                            </div>
+                        </div>
+                        <div class="box-social">
+                            <p class="title">Cộng đồng TopCV</p>
+                            <div class="btn-list-social">
+                                <a target="_blank" href="https://www.facebook.com/topcv.vn">
+                                    <img class="img-responsive"
+                                        src="https://www.topcv.vn/v4/image/footer/facebook.png?v=1.0.0">
+                                </a>
+                                <a target="_blank" href="https://www.youtube.com/c/TopCVpro">
+                                    <img class="img-responsive"
+                                        src="https://www.topcv.vn/v4/image/footer/youtube.png?v=1.0.0">
+                                </a>
+                                <a target="_blank" href="https://www.linkedin.com/company/topcv-vietnam">
+                                    <img class="img-responsive"
+                                        src="https://www.topcv.vn/v4/image/footer/linkedin.png?v=1.0.0">
+                                </a>
+                                <a target="_blank" href="https://www.tiktok.com/@topcv">
+                                    <img class="img-responsive"
+                                        src="https://www.topcv.vn/v4/image/footer/tiktok.png?v=1.0.0">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="box-menu-item">
+                            <div class="title">
+                                Về TopCV
+                            </div>
+                            <div class="box-menu-child">
+                                <a target="_blank" href="https://topcv.com.vn/">Giới thiệu</a>
+                                <a target="_blank" href="https://www.topcv.vn/gioi-thieu#bao-chi">Góc báo chí</a>
+                                <a target="_blank"
+                                    href="https://www.topcv.vn/cong-ty/cong-ty-co-phan-topcv-viet-nam/105.html">Tuyển
+                                    dụng</a>
+                                <a target="_blank" href="https://www.topcv.vn/gioi-thieu#lien-he">Liên hệ</a>
+                                <a target="_blank" href="https://www.topcv.vn/faqs">Hỏi đáp</a>
+                                <a target="_blank" href="https://www.topcv.vn/dieu-khoan-bao-mat">Chính sách bảo mật</a>
+                                <a target="_blank" href="https://www.topcv.vn/terms-of-service">Điều khoản dịch vụ</a>
+                                <a href="https://static.topcv.vn/manual/Quy_che_san_TMDT_TopCV.pdf" target="_blank">Quy
+                                    chế hoạt động</a>
+                            </div>
+                        </div>
+                        <div class="box-menu-item">
+                            <div class="title">
+                                Đối tác
+                            </div>
+                            <div class="box-menu-child">
+                                <a href="https://www.testcenter.vn/" target="_blank">TestCenter</a>
+                                <a href="https://tophr.vn" target="_blank">TopHR</a>
+                                <a href="https://www.viecngay.vn/" target="_blank">ViecNgay</a>
+                                <a href="https://happytime.vn/" target="_blank">Happy Time</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="box-menu-item">
+                            <div class="title">
+                                Hồ sơ và CV
+                            </div>
+                            <div class="box-menu-child">
+                                <a href="https://www.topcv.vn/quan-ly-cv" target="_blank">Quản lý CV của bạn</a>
+                                <a href="https://www.topcv.vn/profile" target="_blank">TopCV Profile</a>
+                                <a target="_blank" href="https://www.topcv.vn/viet-cv-the-nao-cho-chuan">Hướng dẫn viết
+                                    CV</a>
+                                <a href="https://www.topcv.vn/mau-cv-theo-nganh-nghe" target="_blank">Thư viện CV theo
+                                    ngành nghề</a>
+                                <a href="https://reviewcv.topcv.vn/" target="_blank">Review CV</a>
+                            </div>
+                        </div>
+                        <div class="box-menu-item">
+                            <div class="title">
+                                Khám phá
+                            </div>
+                            <div class="box-menu-child">
+                                <a href="https://www.topcv.vn/app" target="_blank">Ứng dụng di động TopCV</a>
+                                <a href="https://www.topcv.vn/tinh-luong-gross-net" target="_blank">Tính lương Gross -
+                                    Net</a>
+                                <a href="https://www.topcv.vn/tinh-lai-kep" target="_blank">Tính lãi suất kép</a>
+                                <a href="https://www.topcv.vn/lap-ke-hoach-tiet-kiem" target="_blank">Lập kế hoạch tiết
+                                    kiệm</a>
+                                <a href="https://www.topcv.vn/cong-cu-tinh-muc-huong-bao-hiem-that-nghiep"
+                                    target="_blank">Tính bảo hiểm thất nghiệp</a>
+                                <a href="https://www.topcv.vn/tinh-bao-hiem-xa-hoi-mot-lan" target="_blank">Tính bảo
+                                    hiểm xã hội một lần</a>
+                                <a href="https://www.topcv.vn/trac-nghiem-tinh-cach-mbti" target="_blank">Trắc nghiệm
+                                    MBTI</a>
+                                <a href="https://www.topcv.vn/trac-nghiem-da-tri-thong-minh-multiple-intelligences-test"
+                                    target="_blank">Trắc nghiệm MI</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="box-menu-item">
+                            <div class="title">
+                                Xây dựng sự nghiệp
+                            </div>
+                            <div class="box-menu-child">
+                                <a href="https://www.topcv.vn/viec-lam-tot-nhat" target="_blank">Việc làm tốt nhất</a>
+                                <a href="https://www.topcv.vn/viec-lam-luong-cao" target="_blank">Việc làm lương cao</a>
+                                <a href="https://www.topcv.vn/viec-lam-quan-ly" target="_blank">Việc làm quản lý </a>
+                                <a href="https://www.topcv.vn/viec-lam-it" target="_blank">Việc làm IT </a>
+                                <a href="https://www.topcv.vn/viec-lam-senior" target="_blank">Việc làm Senior</a>
+                                <a href="https://www.topcv.vn/tim-viec-lam-ban-thoi-gian-t3" target="_blank">Việc làm
+                                    bán thời gian</a>
+                            </div>
+                        </div>
+                        <div class="box-menu-item">
+                            <div class="title">
+                                Phát triển bản thân
+                            </div>
+                            <div class="box-menu-child">
+                                <a href="https://contest.topcv.vn/" target="_blank">TopCV Contest</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script>
+        const xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+        const yValues = [55, 49, 44, 24, 15];
+        const barColors = ["red", "green", "blue", "orange", "brown"];
+
+        new Chart("myChart", {
+            type: "bar",
+            data: {
+                labels: xValues,
+                datasets: [{
+                    backgroundColor: barColors,
+                    data: yValues,
+                }]
+            },
+            options: {
+                legend: { display: false },
+                title: {
+                    display: true,
+                    text: "World Wine Production 2018",
+                },
+                scales: {
+                    y: {
+                        ticks: {
+                            color: 'white' // Màu chữ của nhãn trên trục y
+                        }
+                    },
+                    x: {
+                        ticks: {
+                            color: 'white' // Màu chữ của nhãn trên trục x
+                        }
+                    }
+                }
+            }
+        });
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+
+    <!-- <script src="jquery.min.js"></script> -->
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>

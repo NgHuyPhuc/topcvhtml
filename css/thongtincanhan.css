@@ -1,0 +1,258 @@
+.pt-24 {
+    padding-top: 24px!important;
+}
+.box-update-info {
+    background: #fff;
+    border-radius: 8px;
+    font-family: Inter,sans-serif;
+    font-style: normal;
+    margin-bottom: 24px;
+    padding: 24px;
+}
+.box-white {
+    background-color: #fff;
+}
+.box-update-info .box-header h4 {
+    color: #212f3f;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+    margin-top: 0;
+}
+.box-update-info .box-header .required {
+    align-items: center;
+    color: #4d5965;
+    display: flex;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+.require_hight-light {
+    color: #dc2f2f;
+}
+.box-content {
+    padding: 10px 0;
+}
+.box-update-info .box-need-work .box-item {
+    margin-bottom: 16px;
+}
+.box-update-info {
+    background: #fff;
+    border-radius: 8px;
+    font-family: Inter,sans-serif;
+    font-style: normal;
+    margin-bottom: 24px;
+    padding: 24px;
+}
+.box-update-info .box-need-work .box-item p {
+    color: #212f3f;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
+}
+.box-update-info .box-submit {
+    margin-top: 24px;
+}
+.box-update-info .box-submit button {
+    background: #00b14f;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    height: 40px;
+    line-height: 20px;
+    width: 100px;
+}
+.btn-topcv-primary {
+    background-color: #00b14f;
+    color: #fff;
+}
+.btn {
+    font-weight: 700;
+    padding: 10px 20px;
+}
+.no-input-here{
+    cursor: not-allowed;
+}
+.box-update-info .box-need-work .box-item__input:disabled {
+    background: #f4f5f5;
+    color: #a6acb2;
+}
+.box-update-info .box-need-work .box-item__input {
+    background: #fff;
+    border: 1px solid #e9eaec;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+.box-setting-sidebar {
+    border-radius: 8px;
+    padding: 20px 20px 16px;
+}
+.box-setting-sidebar {
+    border-radius: 8px;
+    padding: 20px 20px 16px;
+}
+.box-setting-sidebar__header {
+    border-bottom: 1px solid #e6e7e8;
+    display: flex;
+    gap: 24px;
+    justify-content: flex-start;
+    margin: 0;
+    padding-bottom: 16px;
+}
+.box-setting-sidebar__header .profile-avatar {
+    height: 84px;
+    position: relative;
+    width: 84px;
+}
+.box-setting-sidebar__header .profile-avatar img {
+    border-radius: 50%;
+    height: 83px;
+    max-width: 150px;
+    width: 83px;
+}
+.box-setting-sidebar__header .profile-avatar .vip-badge {
+    color: #fff;
+    display: inline-block;
+    font-size: 9px;
+    line-height: 12px;
+    padding: 1px 4px;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    vertical-align: middle;
+}
+.box-setting-sidebar__header-info .text-welcome {
+    color: #212f3f;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .14px;
+    line-height: 22px;
+}
+.box-setting-sidebar__header-info .profile-fullname {
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    color: #212f3f;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin-top: 0;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    position: relative;
+    text-overflow: ellipsis;
+}
+.box-setting-sidebar__header-info .account-type.vip span {
+    border-radius: 2px;
+    color: #fff;
+    display: inline-block;
+    font-size: 12px;
+    padding: 3px 7px;   
+}
+.box-setting-sidebar__header-info .box-footer {
+    margin: 8px 0 0;
+}
+.box-setting-sidebar__header-info .box-footer .btn-upgrade {
+    align-items: center;
+    align-self: stretch;
+    background: #f2f4f5;
+    border-radius: 54px;
+    color: #212f3f;
+    display: flex;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    gap: 6px;
+    justify-content: center;
+    letter-spacing: .15px;
+    line-height: 16px;
+    padding: 4px 12px 4px 8px;
+}
+.box-setting-sidebar__body .description-allow-employee-search ul {
+    color: #212f3f;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: .14px;
+    line-height: 22px;
+    margin-top: 16px;
+}
+
+.box-setting-sidebar__body .description-allow-employee-search ul {
+    list-style-position: inside;
+    list-style: none;
+}
+/* .box-setting-sidebar__body .description-allow-employee-search ul {
+    color: #212f3f;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: .14px;
+    line-height: 22px;
+    margin-top: 16px;
+} */
+.box-setting-sidebar__body .description-allow-employee-search ul li {
+    margin-bottom: 8px;
+}
+.box-setting-sidebar__body .description-allow-employee-search ul li:before {
+    background: var(--accent-primary-20,#e3faed);
+    border-radius: 20px;
+    color: #00b14f;
+    content: "✓";
+    font-family: Font Awesome\ 6 Pro;
+    font-size: 12px;
+    font-weight: 400;
+    height: 16px;
+    margin-right: 8px;
+    padding: 4px;
+    width: 16px;
+}
+.box-setting-sidebar__body #on-off-job-waiting .job-waiting-description {
+    color: #7f878f;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: .12px;
+    line-height: 16px;
+    margin-bottom: 20px;
+}
+#on-off-job-waiting .job-waiting-description {
+    font-size: 13px;
+    line-height: 20px;
+    margin-top: 15px;
+    text-align: justify;
+}
+.box-setting-sidebar__body .border-top {
+    border-top: 1px solid #e6e7e8;
+    margin-top: 0;
+    padding-top: 16px;
+}
+.box-setting-sidebar__body #on-off-job-waiting .job-waiting-description.d-flex {
+    align-items: baseline;
+    gap: 5px;
+}
+.box-setting-sidebar__body .btn-create-profile {
+    font-feature-settings: "clig" off,"liga" off;
+    align-items: center;
+    background: var(--white-500,#fff);
+    border: 1px solid var(--primary-success-40,#99e0b9);
+    border-radius: 4px;
+    color: var(--primary-success-100,#00b14f);
+    display: flex;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    gap: 6px;
+    height: 32px;
+    justify-content: center;
+    letter-spacing: .15px;
+    line-height: 16px;
+    padding: 6px 12px;
+    width: 170px;
+}
+.box-setting-sidebar__body .description-allow-employee-search .banner--app img {
+    width: 100%;
+}
